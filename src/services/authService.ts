@@ -63,7 +63,7 @@ class AuthService {
                 id: decoded.id,
                 email: decoded.email,
                 name: decoded.name,
-                role: decoded.role
+                role: decoded.role?.toLocaleLowerCase() as any
             };
         } catch (error) {
             throw new AuthError('Invalid token format');

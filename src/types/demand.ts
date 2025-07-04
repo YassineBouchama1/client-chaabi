@@ -7,10 +7,10 @@ export interface Article {
 }
 
 export interface CreateDemandRequest {
-  title: string;
+  title: string; 
   description: string;
-  articles: Omit<Article, "id">[];
-  attachedFile?: File;
+  articles: Omit<Article, 'id'>[];
+  file?: File;
 }
 
 export interface Demand {
